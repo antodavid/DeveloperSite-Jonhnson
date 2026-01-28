@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: #333;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1.5rem;
+            margin: 0 0.5rem;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #667eea;
+            border-radius: 4px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            background: white;
+            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 0.5rem;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .skill-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-card {
+            background: #f9f9f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .contact-item strong {
+            color: #667eea;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav a {
+                display: block;
+                margin: 0.5rem 0;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>John Developer</h1>
+        <p>Full Stack Developer | Problem Solver | Tech Enthusiast</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello! I'm a passionate developer with expertise in building modern web applications. 
+                I love creating clean, efficient code and solving complex problems. With years of experience 
+                in software development, I specialize in both frontend and backend technologies, always 
+                staying up-to-date with the latest industry trends and best practices.
+            </p>
+            <p style="margin-top: 1rem;">
+                When I'm not coding, you can find me exploring new technologies, contributing to open-source 
+                projects, or sharing knowledge with the developer community.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">React</div>
+                <div class="skill-item">Node.js</div>
+                <div class="skill-item">HTML/CSS</div>
+                <div class="skill-item">SQL</div>
+                <div class="skill-item">Git</div>
+                <div class="skill-item">Docker</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full-stack e-commerce application with payment integration, user authentication, and real-time inventory management.</p>
+                    <p><strong>Tech Stack:</strong> React, Node.js, MongoDB, Stripe API</p>
+                </div>
+                <div class="project-card">
+                    <h3>Task Management App</h3>
+                    <p>A collaborative task management tool with drag-and-drop functionality, team collaboration features, and real-time updates.</p>
+                    <p><strong>Tech Stack:</strong> Vue.js, Express, PostgreSQL, Socket.io</p>
+                </div>
+                <div class="project-card">
+                    <h3>Weather Dashboard</h3>
+                    <p>An interactive weather dashboard displaying real-time weather data, forecasts, and historical trends with beautiful visualizations.</p>
+                    <p><strong>Tech Stack:</strong> JavaScript, Weather API, Chart.js, CSS3</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <strong>Email:</strong><br>
+                    developer@example.com
+                </div>
+                <div class="contact-item">
+                    <strong>GitHub:</strong><br>
+                    github.com/johndeveloper
+                </div>
+                <div class="contact-item">
+                    <strong>LinkedIn:</strong><br>
+                    linkedin.com/in/johndeveloper
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 John Developer. All rights reserved.</p>
+    </footer>
+</body>
+</html>
